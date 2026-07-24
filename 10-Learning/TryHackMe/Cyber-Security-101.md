@@ -168,3 +168,33 @@ A major focus of the room was Transport Layer Security (TLS), which provides con
 The room also explored how TLS enhances existing application-layer protocols. I learned how HTTP becomes HTTPS, SMTP becomes SMTPS, and email retrieval protocols become POP3S and IMAPS, protecting both authentication credentials and transferred data. In addition, I studied how Secure Shell (SSH) replaces the insecure Telnet protocol for remote administration and how SFTP and FTPS provide secure alternatives for file transfers.
 
 Finally, I learned how Virtual Private Networks (VPNs) create encrypted tunnels over public networks, allowing remote users and sites to communicate securely as if they were connected to the same private network. Together, TLS, SSH, secure application protocols, and VPNs form the foundation of modern secure network communications and are essential technologies for protecting enterprise and Internet infrastructure.
+
+---
+
+## Wireshark: The Basics
+
+This room introduced Wireshark, one of the most widely used network protocol analyzers for inspecting live network traffic and offline packet capture (PCAP) files. I learned how packet analysis provides visibility into network communications by decoding protocols across the TCP/IP stack, making Wireshark an essential tool for network troubleshooting, incident response, malware analysis, and penetration testing.
+
+I became familiar with the Wireshark interface, including the packet list, packet details, and packet bytes panes. The room demonstrated how individual packets can be dissected layer by layer, allowing information such as Ethernet frames, IP addresses, transport protocols, and application-layer data to be examined. Understanding how each protocol encapsulates the next makes it easier to trace communications and identify abnormal network behavior.
+
+The room also covered efficient packet navigation and analysis techniques. I learned how to search for specific packets, inspect protocol fields, follow packet streams, read packet metadata and comments, and move quickly through large captures using navigation features. These capabilities allow analysts to investigate communications without manually inspecting every packet.
+
+Finally, I learned how display filters narrow the visible traffic to specific protocols, addresses, ports, or packet attributes without modifying the original capture. Using display filters significantly improves the speed and accuracy of packet analysis by isolating relevant traffic from large network captures, providing the foundation for more advanced traffic analysis and protocol investigation.
+
+---
+
+## Tcpdump: The Basics
+
+This room introduced `tcpdump`, a lightweight command-line packet analyzer widely used on Unix-like operating systems for capturing and inspecting network traffic. I learned that `tcpdump` is built on the `libpcap` library, which provides low-level access to network packets and serves as the foundation for many packet capture tools. Its speed, stability, and minimal resource usage make it a standard utility for system administrators, network engineers, incident responders, and penetration testers.
+
+I learned how to capture traffic from specific network interfaces, limit the number of captured packets, save captures to PCAP files, and read previously captured traffic for offline analysis. Understanding how to create reusable packet captures allows investigations to be performed without requiring continuous access to the target system and enables captures to be shared with other analysis tools such as Wireshark.
+
+The room also covered Berkeley Packet Filter (BPF) expressions, which allow traffic to be filtered before it is captured. I learned how to isolate packets based on protocols, IP addresses, hosts, ports, and other packet attributes, reducing unnecessary data and making network analysis significantly more efficient. In addition, I explored several display options that control how packet information is presented, including verbosity levels, disabling hostname and port resolution, and displaying packet payloads in different formats. These features enable fast investigation of network communications directly from the terminal without relying on a graphical interface.
+
+## Nmap: The Basics
+
+This room introduced Nmap (Network Mapper), the industry-standard tool for network discovery and security auditing. I learned how Nmap efficiently discovers live hosts, identifies open ports, and enumerates network services, making it a fundamental tool for reconnaissance, system administration, vulnerability assessments, and penetration testing. The room also emphasized how automated scanning dramatically reduces the time required to map large networks compared to manual techniques.
+
+I explored the complete workflow of an Nmap scan, beginning with host discovery to determine which systems are online before performing port scanning to identify accessible network services. The room explained the differences between common port scanning techniques and demonstrated how version detection can identify the software and service versions running behind open ports, providing valuable information for further enumeration and vulnerability assessment.
+
+Another important topic was scan optimization. I learned how timing templates influence scan speed, reliability, and stealth, allowing scans to be adapted to different environments and objectives. Finally, the room covered Nmap's output formats, showing how scan results can be presented in human-readable and machine-readable formats for documentation, reporting, and integration with other security tools. Together, these concepts establish the foundation required for more advanced network reconnaissance and Nmap usage.
