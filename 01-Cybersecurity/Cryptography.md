@@ -76,6 +76,32 @@ Encryption converts plaintext into ciphertext, while decryption performs the rev
 
 ---
 
+## Basic Cryptographic Operations
+
+Many cryptographic algorithms rely on simple mathematical operations that provide useful security properties.
+
+### XOR (Exclusive OR)
+
+XOR is a bitwise operation that outputs `1` when two bits differ and `0` when they are equal. One of its most important properties is reversibility:
+
+Plaintext XOR Key = Ciphertext
+Ciphertext XOR Key = Plaintext
+
+This makes XOR a fundamental building block of stream ciphers and many modern cryptographic algorithms.
+
+### Modular Arithmetic
+
+Modular arithmetic performs calculations using the remainder after division, causing numbers to "wrap around" within a fixed range.
+
+Examples:
+
+- 17 mod 5 = 2
+- 25 mod 7 = 4
+
+Modular arithmetic forms the mathematical foundation of many public-key algorithms, including RSA, Diffie-Hellman, and Elliptic Curve Cryptography.
+
+---
+
 ## Encryption
 
 Encryption protects the confidentiality of information by making data unreadable to unauthorized parties.
@@ -116,7 +142,8 @@ Asymmetric cryptography enables secure key exchange, digital signatures, and aut
 
 Common algorithms include:
 
-- RSA
+- RSA (encryption and digital signatures)
+- Diffie-Hellman (secure key exchange)
 - Elliptic Curve Cryptography (ECC)
 
 ---
@@ -158,7 +185,50 @@ Common algorithms include:
 - SHA-512
 - SHA-3
 
+Important properties include:
+
+- Deterministic output
+- Fixed-length output
+- Avalanche effect
+- Pre-image resistance
+- Collision resistance
+
 Algorithms such as **MD5** and **SHA-1** are considered cryptographically broken and should no longer be used for security-sensitive purposes.
+
+---
+
+## Password Hashing
+
+Passwords should never be stored in plaintext.
+
+Instead, systems store salted password hashes. During authentication, the entered password is hashed again and compared with the stored value.
+
+Modern password hashing algorithms intentionally require significant computational resources to slow down brute-force attacks.
+
+Common password hashing algorithms include:
+
+- bcrypt
+- scrypt
+- Argon2
+
+---
+
+## Password Cracking
+
+Password-cracking tools attempt to recover plaintext passwords from hashes.
+
+Rather than breaking cryptographic algorithms, these tools exploit weak or predictable passwords.
+
+Common attack methods include:
+
+- Dictionary attacks
+- Brute-force attacks
+- Rule-based attacks
+
+Popular tools include:
+
+- John the Ripper
+- Hashcat
 
 ---
 
