@@ -191,6 +191,8 @@ I learned how to capture traffic from specific network interfaces, limit the num
 
 The room also covered Berkeley Packet Filter (BPF) expressions, which allow traffic to be filtered before it is captured. I learned how to isolate packets based on protocols, IP addresses, hosts, ports, and other packet attributes, reducing unnecessary data and making network analysis significantly more efficient. In addition, I explored several display options that control how packet information is presented, including verbosity levels, disabling hostname and port resolution, and displaying packet payloads in different formats. These features enable fast investigation of network communications directly from the terminal without relying on a graphical interface.
 
+---
+
 ## Nmap: The Basics
 
 This room introduced Nmap (Network Mapper), the industry-standard tool for network discovery and security auditing. I learned how Nmap efficiently discovers live hosts, identifies open ports, and enumerates network services, making it a fundamental tool for reconnaissance, system administration, vulnerability assessments, and penetration testing. The room also emphasized how automated scanning dramatically reduces the time required to map large networks compared to manual techniques.
@@ -198,3 +200,41 @@ This room introduced Nmap (Network Mapper), the industry-standard tool for netwo
 I explored the complete workflow of an Nmap scan, beginning with host discovery to determine which systems are online before performing port scanning to identify accessible network services. The room explained the differences between common port scanning techniques and demonstrated how version detection can identify the software and service versions running behind open ports, providing valuable information for further enumeration and vulnerability assessment.
 
 Another important topic was scan optimization. I learned how timing templates influence scan speed, reliability, and stealth, allowing scans to be adapted to different environments and objectives. Finally, the room covered Nmap's output formats, showing how scan results can be presented in human-readable and machine-readable formats for documentation, reporting, and integration with other security tools. Together, these concepts establish the foundation required for more advanced network reconnaissance and Nmap usage.
+
+---
+
+## Cryptography Basics
+
+This room introduced the fundamental principles of cryptography and explained how encryption protects the confidentiality of data by transforming plaintext into ciphertext. I learned the difference between encryption and encoding, the distinction between symmetric and asymmetric encryption, and the purpose of keys in securing communications.
+
+The room also introduced two important mathematical concepts used throughout cryptography. **XOR (Exclusive OR)** is a bitwise operation that outputs `1` when two bits differ and `0` when they are equal, making it reversible and widely used in stream ciphers. **Modular arithmetic (`mod`)** performs calculations using remainders after division, keeping values within a fixed range. This concept forms the mathematical foundation of many public-key cryptosystems such as RSA and Diffie-Hellman.
+
+---
+
+## Public Key Cryptography Basics
+
+This room introduced the principles of asymmetric cryptography and explained how public-key encryption solves the problem of securely exchanging secret keys over untrusted networks. I learned that asymmetric cryptography relies on a mathematically related pair of keys: a public key, which can be shared freely, and a private key, which must remain secret. Unlike symmetric encryption, the two keys perform different roles, making secure communication possible without first sharing a secret.
+
+The room explored the most common public-key algorithms and their purposes. I learned that RSA can be used for both encryption and digital signatures, Diffie-Hellman enables two parties to securely establish a shared secret over an insecure channel, and Elliptic Curve Cryptography (ECC) provides similar security to RSA while requiring much smaller keys. These algorithms form the foundation of many modern cryptographic protocols.
+
+Finally, the room demonstrated how public-key cryptography is applied in real-world systems. I learned how SSH uses key pairs for passwordless authentication, how digital signatures provide authenticity, integrity, and non-repudiation, and how digital certificates and Public Key Infrastructure (PKI) allow clients to verify the identity of servers. Modern protocols such as HTTPS combine asymmetric cryptography for authentication and key exchange with symmetric encryption to efficiently protect data in transit.
+
+---
+
+## Hashing Basics
+
+This room introduced cryptographic hash functions and explained how they generate a fixed-length output from data of any size. I learned the essential properties of secure hash functions, including determinism, the avalanche effect, collision resistance, and the fact that hashing is a one-way operation designed to be computationally infeasible to reverse.
+
+The room explored the role of hashing in authentication systems, showing why passwords should never be stored in plaintext. I learned how password hashes are securely stored using salts to defnd against rainbow table attacks, how common hash algorithms can be recognized, and why weak or unsalted hashes are vulnerable to password-cracking techniques such as dictionary and brute-force attacks
+
+Finally, the room demonstrated how hashing is used to verify data integrity. By comparing the hash values of files, software downloads, or messages, it is possible to detect accidental corruption or malicious tampering without comparing the entire contents. This makes cryptographic hashing a fundamental building block for password storage, file verification, digital signatures, and many other security mechanisms.
+
+---
+
+## John the Ripper: The Basics
+
+This room introduced **John the Ripper (JtR)**, one of the most widely used password-cracking tools in cybersecurity. I learned how John identifies different hash formats and performs dictionary attacks to recover plaintext passwords from cryptographic hashes. The room also covered the importance of selecting the correct hash format and using appropriate wordlists to improve cracking efficiency. 
+
+The room explored several real-world password-cracking scenarios. I learned how to crack Windows authentication hashes, Linux `/etc/shadow` password hashes, password-protected ZIP and RAR archives, and encrypted SSH private keys. It also introduced John’s **Single Crack Mode** and **custom rules**, which generate additional password candidates by applying transformations to existing words, increasing the likelihood of recovering weak passwords.
+
+Finally, the room demonstrated how John the Ripper fits into penetration testing and security assessments. Rather than exploiting cryptographic weaknesses, the tool takes advantage of poor password choices, weak policies, and predictable patterns. This highlighted the importance of strong, unique passwords, proper password storage practices, and effective password policies as essential defenses against offline password-cracking attacks.
