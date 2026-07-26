@@ -25,7 +25,7 @@ Learning progress from platforms such as TryHackMe is documented separately, all
 
 | Directory | Description |
 |-----------|-------------|
-| `00-Resources` | Books, glossaries, cheat sheets, and useful websites. |
+| `00-Resources` | Books, glossaries and useful websites. |
 | `01-Cybersecurity` | Core cybersecurity concepts and security principles. |
 | `02-Networking` | Networking fundamentals, protocols, and infrastructure. |
 | `03-Web` | Web technologies, HTTP, browsers, cookies, and web architecture. |

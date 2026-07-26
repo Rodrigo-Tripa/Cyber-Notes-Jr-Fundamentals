@@ -25,6 +25,7 @@ Hash Algorithm
         ▼
 Generated Hash
         │
+        ▼
 Compare
         │
         ▼
