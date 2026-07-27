@@ -49,12 +49,29 @@ Enumeration actively collects detailed information from systems and services, su
 
 ## Typical Workflow
 
-1. Reconnaissance
-2. Enumeration
-3. Vulnerability Identification
-4. Exploitation
-5. Post-Exploitation
-6. Reporting
+Reconnaissance
+↓
+Enumeration
+↓
+Vulnerability Assessment
+↓
+Weaponization / Payload Selection
+↓
+Exploitation
+↓
+Privilege Escalation
+↓
+Credential Access
+↓
+Persistence
+↓
+Lateral Movement (when applicable)
+↓
+Post-Exploitation
+↓
+Cleanup
+↓
+Reporting
 
 ## Goal
 

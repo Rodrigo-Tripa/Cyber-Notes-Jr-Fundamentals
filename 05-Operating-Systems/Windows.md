@@ -274,6 +274,54 @@ Many Windows applications depend on these variables to locate executables and co
 
 ---
 
+## Server Message Block (SMB)
+
+**Server Message Block (SMB)** is a network protocol developed by Microsoft that enables systems to share files, printers, named pipes, and other resources across a network. It is widely used in Windows environments for file sharing, domain communication, and remote administration.
+
+Modern Windows systems primarily use **SMBv2** and **SMBv3**, while **SMBv1** is deprecated due to multiple critical security vulnerabilities, including **MS17-010 (EternalBlue)**. SMB commonly operates over **TCP port 445**, with older implementations also relying on **NetBIOS over TCP/IP (port 139)**.
+
+Because SMB often provides access to valuable resources and authentication services, it is one of the most frequently targeted protocols during penetration tests.
+
+---
+
+## NTLM Authentication
+
+**NTLM (NT LAN Manager)** is Microsoft's legacy authentication protocol used to verify the identity of users without transmitting their passwords over the network. Instead of sending the password directly, NTLM uses a **challenge-response authentication** mechanism based on password hashes.
+
+Although NTLM remains supported for backward compatibility, Microsoft recommends using **Kerberos** whenever possible because it provides stronger security and mutual authentication.
+
+From an offensive security perspective, NTLM is commonly targeted through techniques such as **NTLM relay**, **Pass-the-Hash**, and **credential capture** attacks.
+
+---
+
+## Security Account Manager (SAM)
+
+The **Security Account Manager (SAM)** is a Windows database that stores information about local user accounts, including password hashes and security identifiers (SIDs). The database is stored on disk and is protected by the operating system to prevent unauthorized access.
+
+Attackers who obtain administrative or SYSTEM privileges may attempt to dump the contents of the SAM database to extract password hashes for offline cracking or Pass-the-Hash attacks.
+
+The SAM only contains **local account credentials**. In Active Directory environments, domain account information is stored within the domain controller's **NTDS.dit** database instead.
+
+---
+
+## Protected View
+
+**Protected View** is a Microsoft Office security feature that opens files originating from potentially untrusted sources in a restricted, read-only environment. Documents received through email, downloaded from the Internet, or obtained from other potentially unsafe locations are isolated to reduce the risk of malicious content executing automatically.
+
+Its purpose is to protect users against malicious documents and phishing attacks by limiting active content until the user explicitly enables editing or other interactive features. Although it significantly improves security, vulnerabilities have occasionally allowed attackers to bypass Protected View protections.
+
+---
+
+## Windows Services
+
+A **Windows Service** is a background process that runs independently of user interaction and performs system or application-related tasks. Services can start automatically during system boot, manually by an administrator, or when triggered by specific events.
+
+Windows relies on services to provide essential functionality such as networking, printing, remote management, Windows Update, and security features. Administrators can manage services using the **Services** management console (`services.msc`), PowerShell, or the Command Prompt.
+
+Misconfigured or vulnerable services are a common target during penetration tests because they may allow privilege escalation, persistence, or unauthorized code execution.
+
+---
+
 ## Summary
 
 Windows combines a graphical interface, robust file system, centralized administration tools, and layered security mechanisms to provide a flexible operating system for personal, business, and enterprise environments. Understanding these core components forms the foundation for Windows administration, troubleshooting, and security.
