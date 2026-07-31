@@ -1,0 +1,6 @@
+# Obsidian
+.obsidian/*
+
+# Keep shared assets (optional)
+!.obsidian/snippets/
+!.obsidian/themes/
