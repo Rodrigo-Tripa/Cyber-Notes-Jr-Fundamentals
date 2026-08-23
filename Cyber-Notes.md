@@ -1,5 +1,3 @@
-# Knowledge Map
-
 #knowledge-map #moc #navigation
 
 ---
@@ -18,7 +16,7 @@
 
 ## Operating Systems
 - [[Operating-Systems]]
-- [[Linux]]
+- [[Cyber-Notes/05-Operating-Systems/Linux|Linux]]
 - [[Windows]]
 - [[Linux-CLI]]
 - [[Windows-CLI]]
@@ -30,7 +28,7 @@
 ## Programming
 - [[Python]]
 - [[JavaScript]]
-- [[SQL]]
+- [[Cyber-Notes/06-Programming/SQL|SQL]]
 - [[Data-Encoding]]
 - [[Data-Representation]]
 
@@ -61,7 +59,7 @@
 
 ## Architecture
 - [[Web-Architecture]]
-- [[Websites]]
+- [[Cyber-Notes/03-Web/Websites|Websites]]
 - [[Browsers]]
 
 ## Protocols
@@ -112,10 +110,11 @@
 # Cheatsheets
 
 ## General
-- [[Linux]]
+- [[Cyber-Notes/09-Cheatsheets/Linux|Linux]]
 - [[Bash]]
 - [[Networking]]
-- [[SQL]]
+- [[Cyber-Notes/09-Cheatsheets/SQL|SQL]]
+- [[Git]]
 
 ## Tool Cheatsheets
 - [[Nmap-Cheat]]
@@ -125,6 +124,7 @@
 - [[Metasploit-Cheat]]
 - [[Meterpreter-Cheat]]
 - [[Msfvenom-Cheat]]
+- [[Burp-Suite-Cheat]]
 
 ---
 
@@ -144,7 +144,8 @@
 - [[Glossary]]
 - [[Search-Operators]]
 - [[Cheat-Sheets]]
-
+- [[Cyber-Notes/00-Resources/Websites|Websites]]
+- [[README]]
 ---
 
 # Walkthroughs

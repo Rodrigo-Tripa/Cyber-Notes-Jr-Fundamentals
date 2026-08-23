@@ -109,6 +109,7 @@ I learned the fundamental structure of PowerShell commands, known as cmdlets, wh
 Another major concept was PowerShell's object pipeline. Instead of passing text between commands, PowerShell passes .NET objects that can be filtered, sorted, selected, and formatted using cmdlets such as `Where-Object`, `Sort-Object`, and `Select-Object`. This object-oriented design enables powerful data processing and simplifies complex administrative tasks without requiring external utilities or extensive text parsing.
 
 The room also demonstrated how PowerShell can gather system and network information, monitor processes and services, and automate repetitive tasks through scripting. I was introduced to variables, loops, conditional statements, and basic scripting concepts that allow administrative tasks to be automated efficiently. These capabilities make PowerShell one of the most important tools in Windows administration and cybersecurity, where it is widely used for system management, incident response, forensic investigations, and security assessments.
+
 ---
 
 ## Linux Shells
