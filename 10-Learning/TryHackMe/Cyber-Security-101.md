@@ -324,12 +324,126 @@ Finally, the room introduced minified JavaScript files and explained why develop
 
 ---
 
+## SQL Fundamentals
+
+SQL Fundamentals introduces the foundational concepts required to understand how databases store, organize, retrieve, and modify information. The room explains databases, Database Management Systems (DBMS), tables, records, fields, and the different types of databases before introducing Structured Query Language (SQL). These concepts are particularly relevant to cybersecurity because databases are commonly involved in web applications, authentication systems, SIEM platforms, malware analysis, and many other security technologies.
+
+The room then focuses on SQL itself, teaching the fundamental operations used to interact with relational databases. This includes CRUD operations — Create, Read, Update, and Delete — as well as SQL clauses and operators used to filter, sort, manipulate, and retrieve specific data. Understanding how these queries are constructed provides the foundation for interpreting database interactions during security assessments.
+
+From a cybersecurity perspective, SQL knowledge is particularly important for understanding vulnerabilities such as SQL Injection. A security professional needs to understand how legitimate SQL queries are constructed before being able to recognize how untrusted user input can alter their intended behaviour. The room therefore establishes the database and SQL knowledge required for later web-security topics involving database manipulation and SQL Injection.
+
+---
+
 ## Burp Suite: The Basics
 
-This room introduced Burp Suite as one of the most widely used tools for web application security testing. I learned that Burp Suite functions as an intercepting proxy positioned between the browser and the target web application, allowing HTTP and HTTPS traffic to be captured, inspected, modified, and replayed before reaching the server. The room also explained the differences between the Community and Professional editions, while familiarising me with Burp's user interface and its core workflow for analysing web traffic. This knowledge forms the foundation for nearly every web penetration testing engagement. (https://tryhackme.com/room/burpsuitebasics)
+This room introduced Burp Suite as one of the most widely used tools for web application security testing. I learned that Burp Suite functions as an intercepting proxy positioned between the browser and the target web application, allowing HTTP and HTTPS traffic to be captured, inspected, modified, and replayed before reaching the server. The room also explained the differences between the Community and Professional editions, while familiarising me with Burp's user interface and its core workflow for analysing web traffic. This knowledge forms the foundation for nearly every web penetration testing engagement. 
 
-A major focus of the room was configuring Burp Suite as the browser's proxy and understanding how intercepted requests travel between the client and the server. I learned how to install Burp's Certificate Authority (CA) certificate to inspect encrypted HTTPS traffic without browser errors, as well as how interception can be enabled or disabled depending on the testing scenario. Understanding this proxy architecture is essential because it allows testers to observe and manipulate application behaviour that would otherwise remain hidden within encrypted communications. (https://tryhackme.com/room/burpsuitebasics)
+A major focus of the room was configuring Burp Suite as the browser's proxy and understanding how intercepted requests travel between the client and the server. I learned how to install Burp's Certificate Authority (CA) certificate to inspect encrypted HTTPS traffic without browser errors, as well as how interception can be enabled or disabled depending on the testing scenario. Understanding this proxy architecture is essential because it allows testers to observe and manipulate application behaviour that would otherwise remain hidden within encrypted communications
 
-The room also introduced several of Burp Suite's core modules. I learned how **Proxy** captures and modifies requests in real time, **HTTP History** records all communication between the browser and target, **Repeater** allows requests to be manually edited and resent multiple times to observe different server responses, and **Target** provides an organised view of the application's discovered structure. Together, these modules enable systematic exploration of web applications, efficient testing of parameters, and detailed analysis of server behaviour without repeatedly navigating through the browser interface. (https://tryhackme.com/room/burpsuitebasics)
+The room also introduced several of Burp Suite's core modules. I learned how **Proxy** captures and modifies requests in real time, **HTTP History** records all communication between the browser and target, **Repeater** allows requests to be manually edited and resent multiple times to observe different server responses, and **Target** provides an organised view of the application's discovered structure. Together, these modules enable systematic exploration of web applications, efficient testing of parameters, and detailed analysis of server behaviour without repeatedly navigating through the browser interface.
 
-Finally, the room demonstrated how Burp Suite integrates into a typical web application assessment by allowing requests to be intercepted, modified, and replayed during vulnerability testing. I learned that manually manipulating HTTP requests is a critical technique for identifying insecure input validation, authentication flaws, access control issues, and other web vulnerabilities. The skills developed in this room establish the practical foundation required for more advanced Burp Suite modules covering Intruder, Decoder, Comparer, Extender, and the testing of vulnerabilities such as SQL Injection, Cross-Site Scripting (XSS), authentication bypasses, and insecure direct object references (IDOR). (https://tryhackme.com/room/burpsuitebasics)
+Finally, the room demonstrated how Burp Suite integrates into a typical web application assessment by allowing requests to be intercepted, modified, and replayed during vulnerability testing. I learned that manually manipulating HTTP requests is a critical technique for identifying insecure input validation, authentication flaws, access control issues, and other web vulnerabilities. The skills developed in this room establish the practical foundation required for more advanced Burp Suite modules covering Intruder, Decoder, Comparer, Extender, and the testing of vulnerabilities such as SQL Injection, Cross-Site Scripting (XSS), authentication bypasses, and insecure direct object references (IDOR)
+
+---
+
+## Hydra
+
+This room introduced Hydra, a fast online password-cracking tool used to test authentication services against password wordlists. I learned how Hydra automates repeated login attempts against network services, making it significantly more efficient than manually testing credentials. Its support for numerous protocols makes it useful when assessing the security of services such as SSH, FTP, HTTP, SMB, and other authentication mechanisms.
+
+The room focused on understanding the components of a Hydra attack, including the target service, username, password wordlist, and authentication protocol. I learned that successful credential attacks depend not only on the cracking tool itself but also on accurate identification of the authentication mechanism and appropriate wordlists. This reinforced the importance of combining enumeration with credential attacks rather than treating brute forcing as an isolated technique.
+
+---
+
+## Gobuster: The Basics
+
+This room introduced Gobuster as an offensive security enumeration tool used to discover resources that may not be directly visible through normal web browsing. I learned how automated wordlist-based enumeration can be used to identify web directories and files, helping reveal administrative interfaces, application functionality, forgotten resources, or other potentially interesting attack surfaces.
+
+The room also covered different enumeration targets, including directories and files, subdomains, and virtual hosts. I learned that these techniques provide different perspectives on the structure of a web application and its surrounding infrastructure, while wordlists determine much of the coverage and effectiveness of the enumeration process. This established Gobuster as a practical tool for systematically expanding the known attack surface during reconnaissance.
+
+---
+
+## Shells Overview
+
+This room introduced shells as interfaces that provide command-line interaction with a system and examined their role in offensive security. I learned the distinction between reverse shells and bind shells: a reverse shell causes the target to establish a connection back to the attacker, while a bind shell exposes a listening service on the target that the attacker connects to. Understanding this distinction is important when analysing how remote command execution can be converted into interactive access.
+
+The room also covered shell listeners, payloads, and web shells. I learned how a listener receives an incoming shell connection and how payloads are responsible for establishing the desired communication channel. Web shells were introduced as another method of obtaining command execution through a compromised web application. Together, these concepts demonstrated how an initial vulnerability or code-execution primitive can be transformed into practical remote interaction with a target system.
+
+---
+
+## SQLMap: The Basics
+
+This room introduced SQL injection and the role of databases in web applications. I learned how web applications use SQL queries to retrieve, modify, and authenticate against data stored in database management systems such as MySQL, PostgreSQL, SQLite, and Microsoft SQL Server. SQL injection occurs when application input is incorporated into database queries in an unsafe manner, allowing an attacker to influence the intended query logic.
+
+The room then introduced SQLMap as an automated tool for detecting and exploiting SQL injection vulnerabilities. I learned how SQLMap can identify injectable parameters and automate database enumeration, including discovering databases, tables, columns, and stored data. The practical exercise reinforced the relationship between identifying an SQL injection vulnerability and systematically extracting information from the underlying database through an automated testing process.
+
+---
+
+## Defensive Security Intro
+
+This room introduced defensive security and the different areas involved in protecting systems, networks, and organizations from cyber threats. I learned about Threat Intelligence, Security Operations Centres (SOC), Digital Forensics and Incident Response (DFIR), Malware Analysis, and Security Information and Event Management (SIEM). These disciplines work together to identify threats, investigate suspicious activity, respond to incidents, and improve an organization's overall security posture.
+
+The room provided an overview of how defensive security differs from offensive security while emphasizing that both disciplines are closely connected. I learned that defenders must understand attacker behaviour and techniques in order to detect, investigate, and respond to malicious activity effectively. This established the main areas of defensive security that are explored in greater depth throughout the remaining rooms of the path.
+
+---
+
+## SOC Fundamentals
+
+This room introduced the Security Operations Centre (SOC) and its role in continuously monitoring and protecting an organization's infrastructure. I learned that a SOC brings together people, processes, and technologies to detect suspicious activity, investigate security events, respond to incidents, and maintain situational awareness across an environment.
+
+The room also introduced the different responsibilities and processes involved in SOC operations. Security analysts investigate alerts and determine whether observed activity represents a genuine threat or a false positive. This requires collecting and correlating information from different sources while following established investigation and response procedures. The room demonstrated how a SOC functions as a central component of an organization's defensive security operations.
+
+---
+
+## Digital Forensics Fundamentals
+
+This room introduced digital forensics as the process of identifying, collecting, preserving, examining, and analysing digital evidence. I learned that forensic investigations can involve many different sources of evidence, including files, system artifacts, memory, network data, and other information left behind by digital activity.
+
+A major focus was the importance of preserving evidence and maintaining its integrity throughout an investigation. I learned that forensic analysis is not simply about finding suspicious files, but about reconstructing events from available artifacts and establishing what happened on a system. The practical investigation demonstrated how forensic techniques can be applied to real-world digital evidence to determine the activities that occurred on a compromised system.
+
+---
+
+## Incident Response Fundamentals
+
+This room introduced the incident response process used to manage cybersecurity incidents in a structured and controlled manner. I learned that incident response involves more than simply removing malicious software: defenders must identify what happened, determine the scope and impact of the incident, contain the threat, eradicate its cause, recover affected systems, and learn from the event.
+
+The room emphasized the importance of having predefined procedures and clear responsibilities before an incident occurs. Effective incident response combines technical investigation with coordination, documentation, communication, and decision-making. By following a structured response process, organizations can reduce the impact of security incidents and improve their ability to handle similar events in the future.
+
+---
+
+## Logs Fundamentals
+
+This room introduced system and application logs as important sources of information for security monitoring and investigation. I learned that logs record events occurring within systems and applications, providing evidence that can be used to understand user activity, system behaviour, authentication attempts, errors, and potentially malicious actions.
+
+The room focused on analysing logs to identify relevant events and reconstruct activity over time. I learned that effective log analysis requires understanding the information contained in individual log entries while also correlating multiple events to identify patterns that may not be obvious when examining them independently. This makes logs an essential source of evidence for security monitoring, incident response, and forensic investigations.
+
+---
+
+## Introduction to SIEM
+
+This room introduced Security Information and Event Management (SIEM) systems and their role in centralized security monitoring. I learned how SIEM platforms collect and aggregate logs and security events from different sources, allowing analysts to search, correlate, and investigate activity across an environment from a single system. This centralized visibility is particularly useful when large volumes of events are generated by endpoints, servers, applications, and network infrastructure.
+
+The room also explored common SIEM capabilities and how analysts interact with the collected data during investigations. I learned that SIEM systems can help identify suspicious patterns, generate alerts, and provide context by correlating events from multiple sources. These capabilities make SIEM an important component of SOC operations, particularly for detecting and investigating security incidents.
+
+---
+
+## Firewall Fundamentals
+
+This room introduced firewalls as security controls that regulate network traffic according to predefined rules. I learned how firewalls can control traffic based on characteristics such as source and destination addresses, ports, protocols, and connection direction. By allowing legitimate traffic while blocking unauthorized connections, firewalls provide an important layer of network security.
+
+The room also provided practical exposure to built-in firewall technologies in both Windows and Linux environments. This demonstrated that firewall functionality can be implemented directly on individual hosts as well as through dedicated network security infrastructure. Understanding how firewall rules are structured and applied is fundamental to controlling network exposure and reducing unnecessary attack surfaces.
+
+---
+
+## IDS Fundamentals
+
+This room introduced Intrusion Detection Systems (IDS) and their role in identifying potentially malicious network or system activity. I learned the distinction between intrusion detection and prevention: an IDS primarily monitors and generates alerts when suspicious activity is detected, while an Intrusion Prevention System (IPS) can additionally take action to block or disrupt detected threats.
+
+The room provided practical experience with Snort, an open-source network intrusion detection system. I learned how IDS rules define patterns associated with suspicious traffic and how detected events can be analysed through generated alerts. This demonstrated the relationship between network traffic, detection signatures, and the investigative process used by security analysts.
+
+---
+
+## Vulnerability Scanner Overview
+
+This room introduced vulnerability scanners as automated tools for identifying known weaknesses in systems, applications, and network services. I learned that vulnerability scanning can evaluate an environment against databases of known vulnerabilities and configuration issues, helping defenders identify weaknesses that should be remediated before they are exploited.
+
+The room also highlighted the role of vulnerability scanning within a broader security process. Scanner results require interpretation because findings can vary in severity, relevance, and accuracy. Effective vulnerability management therefore involves identifying vulnerabilities, assessing their potential impact and risk, prioritizing remediation, and verifying that weaknesses have been addressed rather than simply relying on automated scan results.

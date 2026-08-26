@@ -1,0 +1,393 @@
+#hydra #cheatsheet #password-attacks #bruteforce #authentication
+
+# Hydra Cheat Sheet
+
+## Basic Syntax
+
+```bash
+hydra [options] [target] [protocol]
+```
+
+Basic username/password attack:
+
+```bash
+hydra -l username -P passwords.txt target ssh
+```
+
+* `-l` — Single username
+* `-L` — Username wordlist
+* `-p` — Single password
+* `-P` — Password wordlist
+* `target` — Target IP or hostname
+* `protocol` — Service being tested
+
+## Username + Password Wordlists
+
+```bash
+hydra -L users.txt -P passwords.txt target ssh
+```
+
+Test every username against the password wordlist.
+
+```bash
+hydra -L users.txt -p password target ssh
+```
+
+Test multiple usernames against a single password.
+
+```bash
+hydra -l admin -P passwords.txt target ssh
+```
+
+Test a single username against multiple passwords.
+
+## Common Protocols
+
+### SSH
+
+```bash
+hydra -l username -P passwords.txt target ssh
+```
+
+SSH commonly operates on TCP port `22`.
+
+### FTP
+
+```bash
+hydra -l username -P passwords.txt target ftp
+```
+
+FTP commonly operates on TCP port `21`.
+
+### HTTP Basic Authentication
+
+```bash
+hydra -l username -P passwords.txt target http-get /protected
+```
+
+Test HTTP Basic Authentication against a protected resource.
+
+### HTTP POST Forms
+
+Web login forms require additional information because Hydra needs to understand how the application processes the authentication request.
+
+General structure:
+
+```bash
+hydra -l username -P passwords.txt target http-post-form "/login:username=^USER^&password=^PASS^:F=Login failed"
+```
+
+Important components:
+
+```text
+/login
+```
+
+The login endpoint.
+
+```text
+^USER^
+```
+
+Placeholder replaced by the username being tested.
+
+```text
+^PASS^
+```
+
+Placeholder replaced by the password being tested.
+
+```text
+F=Login failed
+```
+
+Failure condition used to determine whether authentication failed.
+
+The exact form parameters and failure/success condition must match the target application's actual HTTP request.
+
+## Username and Password Placeholders
+
+Hydra uses placeholders when constructing authentication requests:
+
+```text
+^USER^
+```
+
+Represents the username currently being tested.
+
+```text
+^PASS^
+```
+
+Represents the password currently being tested.
+
+For example:
+
+```text
+username=^USER^&password=^PASS^
+```
+
+Hydra replaces these values for every credential attempt.
+
+## Custom Port
+
+If a service is running on a non-standard port:
+
+```bash
+hydra -l username -P passwords.txt -s 2222 target ssh
+```
+
+`-s` specifies the target port.
+
+This is useful when [[Nmap]] reveals that a service is operating on a port other than its default.
+
+## Parallel Tasks
+
+```bash
+hydra -l username -P passwords.txt -t 4 target ssh
+```
+
+`-t` controls the number of parallel tasks.
+
+Higher values can increase speed, but they also generate more simultaneous authentication attempts and can increase the likelihood of triggering rate limits or defensive controls.
+
+Use concurrency appropriate to the authorized testing environment.
+
+## Verbosity
+
+```bash
+hydra -v -l username -P passwords.txt target ssh
+```
+
+Enable verbose output.
+
+```bash
+hydra -V -l username -P passwords.txt target ssh
+```
+
+Show each username/password attempt.
+
+`-V` can produce a large amount of output, but it is useful when troubleshooting an authentication attack.
+
+## Stop After First Valid Credential
+
+```bash
+hydra -f -l username -P passwords.txt target ssh
+```
+
+`-f` stops the attack after finding the first valid credential.
+
+This is useful when the objective is simply to establish whether a valid credential exists rather than enumerate every possible valid combination.
+
+## Resume an Interrupted Attack
+
+Hydra can maintain restore information for interrupted attacks.
+
+```bash
+hydra -R
+```
+
+Attempt to restore a previous interrupted session.
+
+This is useful for large wordlists where an attack may take significant time.
+
+## Output to File
+
+```bash
+hydra -l username -P passwords.txt target ssh -o hydra.txt
+```
+
+Save the output to a file.
+
+This is useful for documenting penetration-testing results and preserving evidence of the authentication test.
+
+## Useful Options
+
+```text
+-l username       Single username
+-L users.txt      Username wordlist
+-p password       Single password
+-P passwords.txt  Password wordlist
+
+-s PORT            Custom service port
+-t TASKS           Number of parallel tasks
+-f                 Stop after first valid credential
+-v                 Verbose output
+-V                 Show every credential attempt
+-o FILE            Save output to file
+-R                 Restore interrupted session
+-h                 Display help
+```
+
+## Typical Workflow
+
+Hydra should normally be used after identifying an authentication service through reconnaissance.
+
+```text
+Reconnaissance
+      ↓
+Service Enumeration
+      ↓
+Identify Authentication Service
+      ↓
+Identify Username(s)
+      ↓
+Select Appropriate Wordlist
+      ↓
+Credential Testing
+      ↓
+Validate Credentials
+```
+
+For example, [[Nmap]] may first identify an exposed SSH service:
+
+```bash
+nmap -sV target
+```
+
+If SSH is confirmed, Hydra can be used to test credentials within the authorized scope:
+
+```bash
+hydra -l username -P passwords.txt target ssh
+```
+
+## Web Login Workflow
+
+For a web login, first understand the actual HTTP request. [[Burp Suite]] is useful for inspecting the login request and identifying:
+
+* Login endpoint
+* HTTP method
+* Username parameter
+* Password parameter
+* Cookies
+* Required headers
+* Successful response
+* Failed response
+
+The relevant request structure can then be represented in Hydra's `http-post-form` syntax.
+
+```text
+HTTP Request
+     ↓
+Identify Form Parameters
+     ↓
+Identify Failure/Success Condition
+     ↓
+Build Hydra Module
+     ↓
+Test Credentials
+     ↓
+Validate Result
+```
+
+## Wordlist Selection
+
+The quality of a credential attack depends heavily on the wordlists used.
+
+A large wordlist is not automatically better. It increases the number of requests and therefore the duration and detectability of the attack.
+
+Useful sources for constructing candidate credentials can include information discovered during reconnaissance, organization-specific password policies, known naming conventions, and authorized password datasets.
+
+Credential testing should be targeted whenever possible.
+
+## Online vs Offline Cracking
+
+Hydra performs **online** authentication attacks:
+
+```text
+Hydra
+  ↓
+Network Service
+  ↓
+Authentication Attempt
+  ↓
+Success / Failure
+```
+
+This differs from offline password cracking:
+
+```text
+Obtained Hash
+     ↓
+Password Cracking Tool
+     ↓
+Candidate Password
+     ↓
+Hash Comparison
+```
+
+Tools such as [[John-the-Ripper]] are primarily used for offline password cracking, while Hydra interacts directly with the live authentication service.
+
+## Common Mistakes
+
+### Wrong Protocol
+
+Using the wrong Hydra module for the target service can result in failed authentication attempts even when valid credentials exist.
+
+### Wrong Port
+
+Always verify which port the service is actually listening on. [[Nmap]] can help identify non-standard service ports.
+
+### Incorrect HTTP Form Syntax
+
+For web forms, the endpoint, parameters, and failure condition must accurately represent the application's behaviour.
+
+### Incorrect Failure Condition
+
+If Hydra cannot correctly distinguish a failed login from a successful one, results may be unreliable.
+
+### Poor Wordlist
+
+A password will not be discovered if it is not present in the tested candidate set.
+
+### Excessive Concurrency
+
+Too many parallel requests can cause rate limiting, account lockouts, service instability, or detection.
+
+## Quick Reference
+
+```bash
+# SSH
+hydra -l USER -P WORDLIST TARGET ssh
+
+# FTP
+hydra -l USER -P WORDLIST TARGET ftp
+
+# Multiple usernames
+hydra -L USERS -P WORDLIST TARGET ssh
+
+# Single password
+hydra -L USERS -p PASSWORD TARGET ssh
+
+# Custom port
+hydra -l USER -P WORDLIST -s PORT TARGET ssh
+
+# Multiple tasks
+hydra -l USER -P WORDLIST -t 4 TARGET ssh
+
+# Stop after first valid credential
+hydra -f -l USER -P WORDLIST TARGET ssh
+
+# Verbose
+hydra -v -l USER -P WORDLIST TARGET ssh
+
+# Show every attempt
+hydra -V -l USER -P WORDLIST TARGET ssh
+
+# Save output
+hydra -l USER -P WORDLIST TARGET ssh -o hydra.txt
+
+# Restore interrupted session
+hydra -R
+```
+
+## Related Notes
+
+* [[Hydra]]
+* [[John-the-Ripper]]
+* [[Nmap]]
+* [[Ports]]
+* [[Burp Suite]]
+* [[Authentication]]
+* [[Offensive-Security]]
+* [[Defensive-Security]]
