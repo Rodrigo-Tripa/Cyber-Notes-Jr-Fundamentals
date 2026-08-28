@@ -447,3 +447,99 @@ The room provided practical experience with Snort, an open-source network intrus
 This room introduced vulnerability scanners as automated tools for identifying known weaknesses in systems, applications, and network services. I learned that vulnerability scanning can evaluate an environment against databases of known vulnerabilities and configuration issues, helping defenders identify weaknesses that should be remediated before they are exploited.
 
 The room also highlighted the role of vulnerability scanning within a broader security process. Scanner results require interpretation because findings can vary in severity, relevance, and accuracy. Effective vulnerability management therefore involves identifying vulnerabilities, assessing their potential impact and risk, prioritizing remediation, and verifying that weaknesses have been addressed rather than simply relying on automated scan results.
+
+---
+
+## CyberChef: The Basics
+
+This room introduced **CyberChef**, a web-based data transformation and analysis tool designed to simplify common cybersecurity operations through a visual interface. Instead of performing each transformation manually, CyberChef allows multiple operations to be combined into **recipes**, which are executed sequentially against supplied input. I learned that the tool can handle a wide range of operations involving encoding, decoding, encryption, data conversion, extraction, and other forms of data manipulation.
+
+The room familiarised me with CyberChef's four main interface areas: **Operations**, **Recipe**, **Input**, and **Output**. The Operations area contains the available transformations and provides search and categorisation features, while the Recipe area is used to select, configure, and order operations. Input accepts text or files to be processed, and Output displays the resulting data. Recipes can also be saved, loaded, cleared, or automatically executed using the Auto Bake functionality.
+
+I also learned how CyberChef can be applied to common cybersecurity data-processing tasks. Relevant operations include Base64 and URL encoding or decoding, hexadecimal and decimal conversion, ROT13, Morse code conversion, extraction of IP addresses, URLs, and email addresses, and conversion between Unix timestamps and human-readable dates. More importantly, the room introduced a structured approach to using the tool: first define the objective, provide the relevant input, identify appropriate operations based on the characteristics of the data, and finally verify whether the output matches the intended result.
+
+---
+
+## CAPA: The Basics
+
+This room introduced **CAPA (Common Analysis Platform for Artifacts)**, a static analysis tool developed by FireEye Mandiant for identifying capabilities present in potentially malicious software. I learned that malware can be analysed statically without executing it, reducing the risk of compromising the analysis environment. CAPA supports several artifact types, including **Portable Executables (PE)**, ELF binaries, .NET modules, shellcode, and sandbox reports, and uses a collection of rules based on known behaviours to determine what a program is capable of doing.
+
+The room introduced CAPA's command-line interface and the importance of understanding its output rather than treating the tool as a simple malware classifier. CAPA can provide different levels of detail through its command-line options, allowing analysts to obtain general results or more verbose information about the capabilities identified in a sample. Results can also be exported in formats such as JSON, making them easier to process or integrate into other analysis workflows.
+
+A major focus was understanding how CAPA represents identified behaviour through different frameworks and classifications. The results can include **MITRE ATT&CK** technique identifiers, **MAEC** behavioural categories, top-level namespaces, and individual capabilities. Namespaces organise related rules and behaviours, while capabilities describe specific actions that the analyzed artifact may perform, such as checking HTTP status codes, executing PowerShell expressions, communicating over a network, or referencing anti-virtualisation mechanisms.
+
+Finally, I learned how CAPA rules connect observed low-level indicators to higher-level behavioural conclusions. The **CAPA Web Explorer** can be used to interactively examine generated results and search through identified capabilities. This provides a practical way to rapidly develop an initial understanding of potentially malicious software without requiring complete manual reverse engineering, making CAPA particularly useful during malware triage, threat hunting, and defensive analysis.
+
+---
+
+## REMnux: Getting Started
+
+This room introduced **REMnux**, a specialised Linux distribution designed for malware analysis and digital investigation. I learned that REMnux provides a preconfigured environment containing a large collection of tools for analysing potentially malicious software, reducing the need to manually install and configure individual utilities. The environment includes tools such as **Volatility**, **YARA**, **Wireshark**, **oledump**, and **INetSim**, providing capabilities for file analysis, memory investigation, network analysis, and malware behaviour analysis.
+
+A major focus was the analysis of potentially malicious documents and files. I learned how tools such as **oledump.py** can inspect OLE2/Compound File Binary Format documents and expose their internal data streams, which is particularly useful when investigating malicious Microsoft Office documents. This demonstrated the importance of examining the internal structure of suspicious files rather than relying solely on their file extension or apparent contents.
+
+The room also introduced **INetSim**, which can simulate common Internet services inside an isolated analysis environment. This allows potentially malicious software to interact with simulated network services without providing it with access to the real Internet, helping analysts observe and investigate network-related behaviour while reducing the risk associated with executing suspicious samples.
+
+Finally, I was introduced to the use of **Volatility** for memory analysis and the preprocessing of memory images before investigation. This reinforced the importance of volatile memory as a source of forensic evidence, since running processes, network connections, loaded modules, and other information may exist in memory even when they are not recoverable directly from disk. Overall, REMnux provides an integrated environment for malware triage, document analysis, network behaviour investigation, and memory forensics.
+
+---
+
+## FlareVM: Arsenal of Tools
+
+This room introduced **FLARE-VM**, a Windows-based virtual machine environment designed for malware analysis, reverse engineering, and security research. I learned that FLARE-VM provides a preconfigured collection of tools that supports different stages of malware investigation, allowing analysts to work within a dedicated Windows analysis environment rather than configuring every tool individually.
+
+The room explored several categories of tools available within the FLARE-VM environment, including utilities for **static analysis, dynamic analysis, debugging, reverse engineering, network analysis, and system inspection**. This demonstrated how malware analysis often requires combining multiple tools because no single utility can provide complete visibility into a suspicious program's structure and behaviour.
+
+I also learned about tools used to examine Windows executables and investigate their behaviour during execution. Static analysis can reveal characteristics of a sample without executing it, while dynamic analysis allows analysts to observe processes, files, registry activity, network communication, and other runtime behaviour. Debuggers and reverse-engineering tools provide a deeper level of analysis when understanding the internal logic of a binary is necessary.
+
+Overall, FLARE-VM provides an integrated Windows environment for malware research and reverse engineering. Combined with specialised environments such as **REMnux**, it demonstrates how analysts can use purpose-built toolsets to approach suspicious files from complementary perspectives, progressing from initial triage and static analysis toward detailed behavioural and code-level investigation.
+
+---
+
+SECTION 13 WILL BE IGNORED
+
+https://tryhackme.com/room/securityprinciples
+https://tryhackme.com/room/careersincyber
+https://tryhackme.com/room/training
+
+---
+
+## OWASP Top 10 2025: IAAA Failures
+
+This room introduced the **IAAA model — Identity, Authentication, Authorisation, and Accountability** — as a framework for understanding how applications establish and enforce user identity and actions. Identity represents the account associated with a person or service, authentication verifies that identity, authorisation determines what the authenticated identity is allowed to access or perform, and accountability records who performed an action, when it occurred, and from where. Failures at these stages can allow attackers to access other users' data, obtain unauthorized privileges, or perform malicious actions without sufficient visibility.
+
+The room covered **A01: Broken Access Control**, which occurs when an application fails to enforce authorization correctly on every request. A common example is **IDOR (Insecure Direct Object Reference)**, where manipulating an object identifier allows access to another user's resources. These weaknesses can result in horizontal privilege escalation, where an attacker accesses another user's data at the same privilege level, or vertical privilege escalation, where a lower-privileged user gains access to functionality intended for higher-privileged roles. Proper authorization must therefore be enforced server-side rather than relying on client-controlled values.
+
+The room also covered **A07: Authentication Failures**, including username enumeration, weak or guessable passwords, missing brute-force protections, flaws in registration or login logic, and insecure session or cookie handling. These weaknesses can allow attackers to authenticate as another user or cause a session to become associated with the wrong identity. Effective defenses include canonicalising identities, enforcing unique account identifiers, rate-limiting authentication attempts, implementing appropriate lockout mechanisms, and rotating sessions when credentials or privileges change.
+
+Finally, **A09: Logging & Alerting Failures** was introduced as a failure of accountability and detection. Applications should record security-relevant events throughout the authentication lifecycle, including successful and failed authentication, password and MFA changes, privilege modifications, and administrative actions. Logs should be centralised, retained appropriately, and protected from tampering, while alerts should identify suspicious patterns such as brute-force attempts or unexpected privilege escalation. Without sufficient logging and alerting, defenders may be unable to detect attacks or reconstruct what occurred during an incident.
+
+---
+
+## OWASP Top 10 2025: Application Design Flaws
+
+This room introduced four OWASP Top 10 2025 categories associated with weaknesses in application architecture, deployment, and design: **AS02 Security Misconfigurations, AS03 Software Supply Chain Failures, AS04 Cryptographic Failures, and AS06 Insecure Design**. The common theme is that security failures can originate from weak foundations rather than from a conventional coding vulnerability. Secure applications therefore require secure configurations, trusted dependencies, appropriate cryptography, and security requirements established during design.
+
+**Security Misconfigurations (AS02)** occur when systems are deployed with unsafe defaults, unnecessary exposed services, weak permissions, outdated components, or excessive information disclosure. Examples include unchanged default credentials, publicly accessible cloud storage, unrestricted APIs, verbose error messages, and exposed administrative interfaces. Prevention requires hardening configurations, removing unnecessary services, applying least privilege, limiting network exposure, maintaining current software, and regularly auditing infrastructure and cloud permissions.
+
+**Software Supply Chain Failures (AS03)** arise when applications depend on compromised, outdated, unverified, or improperly managed third-party components. Modern applications rely heavily on external libraries, services, build pipelines, and increasingly AI models, meaning a compromise in a dependency can affect applications that never directly contained the vulnerable code. Secure supply chains require verifying dependencies and their provenance, maintaining and patching them, protecting CI/CD pipelines, signing and verifying software releases, and continuously monitoring dependencies throughout the Software Development Life Cycle.
+
+**Cryptographic Failures (AS04)** occur when cryptography is absent, incorrectly implemented, or based on weak algorithms, insecure keys, or inadequate key-management practices. Sensitive information may consequently be exposed either at rest or in transit. The room highlighted deprecated algorithms, hard-coded secrets, poor key rotation, and invalid TLS configurations as examples, while modern authenticated encryption, secure key-management systems, proper certificate management, and controlled secret rotation provide stronger protection.
+
+Finally, **Insecure Design (AS06)** describes weaknesses introduced at the architectural or business-logic level rather than through implementation mistakes. Examples include flawed recovery or approval workflows, assumptions about how users behave, excessive privileges granted to automated systems, missing security guardrails, and functionality that was designed without adequate threat modelling. The room also introduced AI-specific design risks such as prompt injection, unsafe reliance on model output, poisoned models, and excessive authority granted to AI agents. Secure design therefore requires explicit security requirements, threat modelling, least privilege, validation of inputs and outputs, human oversight for high-risk actions, and continuous testing of abuse cases throughout development.
+
+---
+
+## OWASP Top 10 2025: Insecure Data Handling
+
+This room introduced several OWASP Top 10 2025 categories related to the way applications process, validate, protect, and trust data. The central theme is that data becomes a security boundary when it influences application behaviour, database queries, operating system commands, serialized objects, or software components. When applications fail to validate or safely process this data, attackers may be able to alter application logic, access sensitive information, execute unintended operations, or compromise the integrity of the system.
+
+**A05: Injection** occurs when untrusted data is interpreted as part of a command or query rather than being treated strictly as data. Common examples include SQL injection, command injection, and other forms of interpreter-based injection. The underlying problem is the failure to maintain a clear separation between data and executable instructions. Effective defenses include parameterized queries, context-aware output encoding, strict input validation, safe APIs, and avoiding unnecessary interpretation of user-controlled input.
+
+The room also covered **A04: Cryptographic Failures**, emphasizing that sensitive information must be appropriately protected both at rest and in transit. Failures can involve missing encryption, weak or obsolete algorithms, poor key management, hard-coded secrets, or incorrect cryptographic implementations. The choice of cryptographic mechanism must therefore be combined with secure key generation, storage, rotation, and access control rather than treating encryption itself as a complete security solution.
+
+Finally, **A08: Software or Data Integrity Failures** concerns situations where applications trust software, dependencies, updates, serialized data, or other external components without adequately verifying their integrity or authenticity. This can allow attackers to introduce malicious code or manipulate data that the application subsequently trusts. Secure dependency management, integrity verification, trusted update mechanisms, digital signatures, and protection of software delivery pipelines are therefore important controls. Together, these categories demonstrate that secure data handling requires controlling not only what data an application accepts, but also how that data is interpreted, protected, and trusted throughout its lifecycle.
+
+===
+
+# END
