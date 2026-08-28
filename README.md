@@ -37,7 +37,7 @@ The goal is not to reproduce courses or collect isolated answers. The vault is d
 
 <td width="28%" align="center" valign="middle">
 
-<img src="./assets/cat-square.gif" width="170px" alt="Cyber Notes">
+<img src="./assets/matrix-rectangule-vertical.gif" width="170px" alt="Cyber Notes">
 
 </td>
 </tr>
@@ -309,7 +309,7 @@ Cyber Notes is intentionally maintained as a living knowledge base. Existing not
 
 <div align="center">
 
-<img src="./assets/matrix-rectangule-vertical.gif" width="90px" alt="Matrix decoration">
+<img src="./assets/skull.gif" width="90px" alt="Matrix decoration">
 
 <br>
 
