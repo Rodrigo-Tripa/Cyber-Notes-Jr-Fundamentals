@@ -1,0 +1,23 @@
+# CPU
+
+#computer-fundamentals #hardware #architecture
+
+The **Central Processing Unit (CPU)** is the primary general-purpose processing component of a computer. Its fundamental role is to execute instructions produced by software and perform the operations required by the operating system and applications. Although modern computers contain many specialised processors, the CPU remains responsible for coordinating a large portion of the system's computational activity.
+
+At a basic level, CPU execution follows a continuous **fetch-decode-execute cycle**. The processor fetches an instruction from memory, decodes what operation is required, obtains the necessary operands, and executes the operation. The result may then be written to a register or memory before the processor moves to the next instruction. Modern processors perform this process using highly optimised and often parallelised internal mechanisms, so the simple cycle is an abstraction of considerably more complex hardware.
+
+Important CPU components include the **Control Unit (CU)**, **Arithmetic Logic Unit (ALU)**, registers, and cache. The Control Unit coordinates instruction execution, while the ALU performs arithmetic and logical operations such as addition, subtraction, comparisons, and bitwise operations. **Registers** are very small and extremely fast storage locations located inside the processor. They hold values, memory addresses, instruction information, and intermediate results required during execution.
+
+The CPU also relies heavily on **cache memory**. Cache is considerably faster than [[RAM]] and is used to store data and instructions that the processor is likely to access again. Modern CPUs normally contain several cache levels, commonly referred to as L1, L2, and L3. L1 is generally the smallest and fastest, while higher levels provide greater capacity at increased latency. This hierarchy exists because accessing data directly from main memory for every operation would create a significant performance bottleneck.
+
+Modern CPUs contain multiple **cores**, with each core providing an independent execution environment capable of processing instructions. Multiple cores allow different threads or processes to execute concurrently. Some processors additionally implement **simultaneous multithreading (SMT)**, allowing a physical core to maintain multiple hardware execution contexts. The number of cores and threads is therefore relevant to performance, but it does not directly determine how fast every workload will execute.
+
+CPU performance is influenced by several interacting factors. **Clock frequency** represents the number of clock cycles performed per second, but a higher frequency does not automatically mean a faster processor. The processor's architecture, instruction set, pipeline design, cache hierarchy, branch prediction, execution units, memory latency, and workload all influence actual performance. A modern CPU can therefore outperform an older processor running at a higher nominal clock frequency.
+
+The CPU communicates with [[RAM]], [[Storage]], and other hardware through the system's hardware interfaces and memory subsystem. The different access speeds of registers, cache, RAM, and storage create a **memory hierarchy** in which frequently used data is kept as close to the CPU as practical. When required data is not available in cache, the processor may need to access RAM, and if the required information is not resident in memory, the operating system may need to retrieve it from persistent storage.
+
+CPUs also implement hardware mechanisms that are directly relevant to operating-system security. Modern processors provide different **privilege levels** or execution modes that allow the operating system to separate privileged kernel operations from ordinary user applications. Features such as memory protection, virtualisation extensions, hardware random-number generation, cryptographic acceleration, and trusted execution mechanisms can also depend on CPU capabilities.
+
+From a cybersecurity perspective, the CPU is important because vulnerabilities can exist below the operating-system level. CPU architecture and implementation can influence isolation between processes, virtual machines, and privilege levels. Hardware vulnerabilities such as speculative-execution issues have demonstrated that implementation details of processors can sometimes affect the security assumptions made by operating systems and applications.
+
+Understanding the CPU therefore provides a foundation for understanding [[Computer-Architecture]], [[Operating-Systems]], [[Virtualization]], memory management, process execution, and low-level security mechanisms.
