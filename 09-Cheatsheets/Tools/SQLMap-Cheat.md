@@ -380,10 +380,10 @@ sqlmap -u "URL" --technique=BEUT
 
 ## Related Notes
 
-* [[SQLMap]]
-* [[SQL]]
+* [[Cyber-Notes-Jr-Fundamentals/07-Tools/SQLMap]]
+* [[Cyber-Notes-Jr-Fundamentals/06-Programming/SQL]]
 * [[SQL Injection]]
 * [[Burp Suite]]
-* [[HTTP]]
-* [[Gobuster]]
+* [[Cyber-Notes-Jr-Fundamentals/03-Web/HTTP]]
+* [[Cyber-Notes-Jr-Fundamentals/07-Tools/Gobuster]]
 * [[Offensive-Security]]

@@ -148,7 +148,7 @@ Its primary purpose is efficient packet capture and basic packet inspection.
 ## Related Notes
 
 - [[Wireshark]]
-- [[Nmap]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Nmap]]
 - [[TCP-IP]]
 - [[OSI-Model]]
 - [[Packets-and-Frames]]

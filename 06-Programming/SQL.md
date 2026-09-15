@@ -40,7 +40,7 @@ Indexes improve query performance by providing additional structures that allow 
 
 Web applications commonly use SQL databases as their persistent storage layer. A typical application receives an HTTP request, validates the input, executes a database operation, and returns the resulting data to the client.
 
-This creates an important security boundary between [[HTTP]], application code, and the database. SQL should normally be constructed through parameterized queries or equivalent safe database interfaces rather than by directly concatenating untrusted user input into SQL statements.
+This creates an important security boundary between [[Cyber-Notes-Jr-Fundamentals/03-Web/HTTP]], application code, and the database. SQL should normally be constructed through parameterized queries or equivalent safe database interfaces rather than by directly concatenating untrusted user input into SQL statements.
 
 ## SQL Injection
 
@@ -56,13 +56,13 @@ SQL injection is closely related to the principles covered by [[OWASP-Top-10]] a
 
 Security professionals need to understand SQL both to assess applications and to investigate systems that depend on relational databases. Knowledge of schemas, relationships, queries, permissions, transactions, and query construction makes it possible to distinguish normal database behaviour from potentially malicious activity.
 
-SQL knowledge also provides the foundation for understanding database-focused security tools such as [[SQLMap]].
+SQL knowledge also provides the foundation for understanding database-focused security tools such as [[Cyber-Notes-Jr-Fundamentals/07-Tools/SQLMap]].
 
 ## Related Concepts
 
 - [[Data-Representation]]
 - [[Data-Encoding]]
-- [[HTTP]]
+- [[Cyber-Notes-Jr-Fundamentals/03-Web/HTTP]]
 - [[Web-Architecture]]
 - [[OWASP-Top-10]]
-- [[SQLMap]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/SQLMap]]

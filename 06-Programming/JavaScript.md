@@ -26,7 +26,7 @@ The browser executes JavaScript within a security boundary known as the same-ori
 
 JavaScript applications commonly communicate with backend systems through HTTP requests. APIs frequently return structured data using JSON, which JavaScript can parse and manipulate.
 
-This creates an important relationship between JavaScript and [[HTTP]]. A web application may use JavaScript to collect input, construct a request, send it to an API, process the response, and update the interface without requiring a complete page reload.
+This creates an important relationship between JavaScript and [[Cyber-Notes-Jr-Fundamentals/03-Web/HTTP]]. A web application may use JavaScript to collect input, construct a request, send it to an API, process the response, and update the interface without requiring a complete page reload.
 
 ## Asynchronous Execution
 
@@ -40,12 +40,12 @@ JavaScript is directly involved in many web vulnerabilities because it frequentl
 
 Client-side validation should not be treated as a security boundary because users can modify or bypass JavaScript execution. Security-sensitive validation and authorization must ultimately be enforced by the server.
 
-JavaScript analysis is therefore an important skill when studying [[OWASP-Top-10]], [[HTTP]], [[Cookies]], [[Sessions]], and [[Web-Architecture]].
+JavaScript analysis is therefore an important skill when studying [[OWASP-Top-10]], [[Cyber-Notes-Jr-Fundamentals/03-Web/HTTP]], [[Cookies]], [[Sessions]], and [[Web-Architecture]].
 
 ## Related Concepts
 
 - [[Data-Encoding]]
-- [[HTTP]]
+- [[Cyber-Notes-Jr-Fundamentals/03-Web/HTTP]]
 - [[Cookies]]
 - [[Sessions]]
 - [[Web-Architecture]]

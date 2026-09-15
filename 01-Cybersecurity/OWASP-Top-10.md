@@ -89,7 +89,7 @@ The fundamental security problem is the failure to maintain a reliable separatio
 
 Defensive techniques include parameterized queries, context-aware output encoding, strict input validation, safe APIs, and avoiding unnecessary interpreters.
 
-Related concepts: [[SQL]], [[HTTP]], [[JavaScript]].
+Related concepts: [[Cyber-Notes-Jr-Fundamentals/06-Programming/SQL]], [[Cyber-Notes-Jr-Fundamentals/03-Web/HTTP]], [[JavaScript]].
 
 ## A06 — Insecure Design
 
@@ -115,7 +115,7 @@ This creates a direct relationship between authentication and access control:
 
 **Authorization answers "What are you allowed to do?"**
 
-Related concepts: [[Sessions]], [[Cookies]], [[Active-Directory]].
+Related concepts: [[Sessions]], [[Cookies]], [[Cyber-Notes-Jr-Fundamentals/05-Operating-Systems/Active-Directory]].
 
 ## A08 — Software or Data Integrity Failures
 
@@ -158,11 +158,11 @@ A practical application-security workflow can therefore use the Top 10 to establ
 ## Related Notes
 
 * [[Web-Architecture]]
-* [[HTTP]]
+* [[Cyber-Notes-Jr-Fundamentals/03-Web/HTTP]]
 * [[HTTPS]]
 * [[Sessions]]
 * [[Cookies]]
-* [[SQL]]
+* [[Cyber-Notes-Jr-Fundamentals/06-Programming/SQL]]
 * [[JavaScript]]
 * [[Cryptography]]
 * [[SIEM]]

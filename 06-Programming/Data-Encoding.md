@@ -34,6 +34,6 @@ Encoding can also be layered. A value may be URL-encoded and then Base64-encoded
 
 - [[Data-Representation]]
 - [[Cryptography]]
-- [[HTTP]]
+- [[Cyber-Notes-Jr-Fundamentals/03-Web/HTTP]]
 - [[Cookies]]
 - [[Sessions]]

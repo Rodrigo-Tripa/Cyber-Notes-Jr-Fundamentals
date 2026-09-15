@@ -460,7 +460,7 @@ gobuster vhost -u http://TARGET -w vhosts.txt
 
 # Gobuster + Nmap
 
-[[Nmap]] can identify exposed ports and services before Gobuster is used.
+[[Cyber-Notes-Jr-Fundamentals/07-Tools/Nmap]] can identify exposed ports and services before Gobuster is used.
 
 Example workflow:
 
@@ -613,12 +613,12 @@ gobuster vhost -u http://TARGET -w vhosts.txt
 
 ## Related Notes
 
-* [[Gobuster]]
-* [[Nmap]]
+* [[Cyber-Notes-Jr-Fundamentals/07-Tools/Gobuster]]
+* [[Cyber-Notes-Jr-Fundamentals/07-Tools/Nmap]]
 * [[Burp Suite]]
-* [[HTTP]]
+* [[Cyber-Notes-Jr-Fundamentals/03-Web/HTTP]]
 * [[HTTPS]]
-* [[DNS]]
+* [[Cyber-Notes-Jr-Fundamentals/02-Networking/DNS]]
 * [[Web-Architecture]]
-* [[Websites]]
+* [[Cyber-Notes-Jr-Fundamentals/03-Web/Websites]]
 * [[Offensive-Security]]

@@ -99,7 +99,7 @@ A typical web enumeration workflow can look like:
 
 `Port Discovery → Service Identification → Web Enumeration → Application Analysis → Vulnerability Testing`
 
-[[Nmap]] can identify exposed web services and ports. [[HTTP]] knowledge helps interpret the application's communication model and responses. Gobuster can then expand the known attack surface by discovering additional resources.
+[[Cyber-Notes-Jr-Fundamentals/07-Tools/Nmap]] can identify exposed web services and ports. [[Cyber-Notes-Jr-Fundamentals/03-Web/HTTP]] knowledge helps interpret the application's communication model and responses. Gobuster can then expand the known attack surface by discovering additional resources.
 
 This makes Gobuster an enumeration tool rather than an exploitation tool. Its primary purpose is to increase visibility into the target.
 
@@ -113,11 +113,11 @@ Enumeration cannot be completely prevented while a public web application remain
 
 ## Related Notes
 
-* [[Nmap]]
-* [[HTTP]]
+* [[Cyber-Notes-Jr-Fundamentals/07-Tools/Nmap]]
+* [[Cyber-Notes-Jr-Fundamentals/03-Web/HTTP]]
 * [[HTTPS]]
 * [[Web-Architecture]]
-* [[Websites]]
-* [[DNS]]
+* [[Cyber-Notes-Jr-Fundamentals/03-Web/Websites]]
+* [[Cyber-Notes-Jr-Fundamentals/02-Networking/DNS]]
 * [[Offensive-Security]]
 * [[Defensive-Security]]

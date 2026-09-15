@@ -169,7 +169,7 @@ The **Professional Edition** adds automated vulnerability scanning, unrestricted
 
 Burp Suite cannot:
 
-- Discover hosts like [[Nmap]].
+- Discover hosts like [[Cyber-Notes-Jr-Fundamentals/07-Tools/Nmap]].
 - Capture raw network traffic like [[Wireshark]].
 - Analyze packets below the application layer.
 - Replace a complete penetration testing methodology.
@@ -191,15 +191,15 @@ It is a specialized tool for **web application security testing**, not a general
 
 ## Related Notes
 
-- [[HTTP]]
+- [[Cyber-Notes-Jr-Fundamentals/03-Web/HTTP]]
 - [[HTTPS]]
 - [[Web-Architecture]]
 - [[Cookies]]
 - [[Sessions]]
 - [[JavaScript]]
-- [[SQL]]
+- [[Cyber-Notes-Jr-Fundamentals/06-Programming/SQL]]
 - [[Wireshark]]
-- [[Nmap]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Nmap]]
 
 ---
 

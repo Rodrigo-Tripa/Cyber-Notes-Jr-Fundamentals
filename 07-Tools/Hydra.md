@@ -4,7 +4,7 @@
 
 Hydra is a fast network logon cracker designed to automate online authentication attacks against services that accept credentials over a network. Instead of manually attempting credentials, Hydra systematically tests combinations of usernames and passwords against a target authentication service.
 
-Hydra is fundamentally an **online password attack tool**. This distinguishes it from offline password-cracking tools such as [[John-the-Ripper]], which operate against password hashes that have already been obtained. With Hydra, each credential attempt is sent to a live service, meaning that network connectivity, service behaviour, authentication mechanisms, and defensive controls directly affect the attack.
+Hydra is fundamentally an **online password attack tool**. This distinguishes it from offline password-cracking tools such as [[Cyber-Notes-Jr-Fundamentals/07-Tools/John-the-Ripper]], which operate against password hashes that have already been obtained. With Hydra, each credential attempt is sent to a live service, meaning that network connectivity, service behaviour, authentication mechanisms, and defensive controls directly affect the attack.
 
 ## Authentication Attacks
 
@@ -18,7 +18,7 @@ Hydra can be used against a variety of network services, including protocols suc
 
 Online attacks interact directly with the target service. This provides immediate feedback about whether a credential is valid, but it also exposes the attack to defensive mechanisms.
 
-Offline attacks work differently. If an attacker obtains password hashes, they can attempt to recover the original passwords without repeatedly communicating with the authentication service. Tools such as [[John-the-Ripper]] and other password-cracking utilities are therefore more appropriate for offline attacks.
+Offline attacks work differently. If an attacker obtains password hashes, they can attempt to recover the original passwords without repeatedly communicating with the authentication service. Tools such as [[Cyber-Notes-Jr-Fundamentals/07-Tools/John-the-Ripper]] and other password-cracking utilities are therefore more appropriate for offline attacks.
 
 This distinction is important when analysing authentication security:
 
@@ -62,7 +62,7 @@ Hydra therefore demonstrates an important security principle: authentication sec
 
 ## Hydra in a Penetration Test
 
-Hydra is most useful after reconnaissance has identified an exposed authentication service. [[Nmap]], for example, can help identify open ports and determine which services may be available. The tester can then determine whether those services expose authentication mechanisms that are within the scope of the assessment.
+Hydra is most useful after reconnaissance has identified an exposed authentication service. [[Cyber-Notes-Jr-Fundamentals/07-Tools/Nmap]], for example, can help identify open ports and determine which services may be available. The tester can then determine whether those services expose authentication mechanisms that are within the scope of the assessment.
 
 This creates a common workflow:
 
@@ -72,8 +72,8 @@ Hydra should not be treated as a replacement for enumeration. Without understand
 
 ## Related Notes
 
-* [[John-the-Ripper]]
-* [[Nmap]]
+* [[Cyber-Notes-Jr-Fundamentals/07-Tools/John-the-Ripper]]
+* [[Cyber-Notes-Jr-Fundamentals/07-Tools/Nmap]]
 * [[Ports]]
 * [[Offensive-Security]]
 * [[Defensive-Security]]

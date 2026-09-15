@@ -66,7 +66,7 @@ Selecting an incompatible payload will usually cause the exploitation attempt to
 
 ## Related Notes
 
-- [[Metasploit]]
-- [[Msfvenom]]
-- [[Meterpreter]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Metasploit]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Msfvenom]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Meterpreter]]
 - [[Modules]]

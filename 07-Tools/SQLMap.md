@@ -18,7 +18,7 @@ If the application treats the input as part of the SQL syntax instead of strictl
 
 This can potentially allow unauthorized access to database information, modification of data, authentication bypass, or other database-level actions depending on the application's privileges and the underlying database system.
 
-Understanding [[SQL]] is therefore essential before using SQLMap. The tool automates the exploitation process, but understanding the database query and application behaviour is necessary to interpret its results correctly.
+Understanding [[Cyber-Notes-Jr-Fundamentals/06-Programming/SQL]] is therefore essential before using SQLMap. The tool automates the exploitation process, but understanding the database query and application behaviour is necessary to interpret its results correctly.
 
 ## Injectable Parameters
 
@@ -87,7 +87,7 @@ The practical applicability of each technique depends on the database, query str
 
 ## Request Context
 
-SQLMap operates against web applications, so understanding [[HTTP]] is important. An HTTP request contains information such as the method, URL, parameters, headers, cookies, and potentially request bodies. SQLMap can use this request context when testing an application.
+SQLMap operates against web applications, so understanding [[Cyber-Notes-Jr-Fundamentals/03-Web/HTTP]] is important. An HTTP request contains information such as the method, URL, parameters, headers, cookies, and potentially request bodies. SQLMap can use this request context when testing an application.
 
 This is particularly important for authenticated applications. A vulnerable parameter may only be accessible after authentication, meaning that the relevant session information must be available to the testing process.
 
@@ -118,17 +118,17 @@ A simplified workflow is:
 
 `Reconnaissance → Web Enumeration → Parameter Identification → SQL Injection Testing → Database Enumeration → Impact Assessment`
 
-[[Gobuster]] can help discover additional web resources, while [[Burp Suite]] can be used to inspect application requests. SQLMap then provides automation for the SQL injection testing and enumeration stages.
+[[Cyber-Notes-Jr-Fundamentals/07-Tools/Gobuster]] can help discover additional web resources, while [[Burp Suite]] can be used to inspect application requests. SQLMap then provides automation for the SQL injection testing and enumeration stages.
 
 The result is a good example of how individual offensive-security tools complement one another rather than functioning independently.
 
 ## Related Notes
 
-* [[SQL]]
-* [[HTTP]]
+* [[Cyber-Notes-Jr-Fundamentals/06-Programming/SQL]]
+* [[Cyber-Notes-Jr-Fundamentals/03-Web/HTTP]]
 * [[HTTPS]]
 * [[Burp Suite]]
-* [[Gobuster]]
+* [[Cyber-Notes-Jr-Fundamentals/07-Tools/Gobuster]]
 * [[Web-Architecture]]
 * [[Offensive-Security]]
 * [[Defensive-Security]]

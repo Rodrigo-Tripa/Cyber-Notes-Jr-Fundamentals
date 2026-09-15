@@ -116,7 +116,7 @@ Incorrect payload selection is one of the most common causes of failed exploitat
 
 ## Related Notes
 
-- [[Metasploit]]
-- [[Payloads]]
-- [[Meterpreter]]
-- [[Msfconsole]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Metasploit]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Help/Payloads]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Meterpreter]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Msfconsole]]

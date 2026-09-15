@@ -107,8 +107,8 @@ Operators should therefore consider Meterpreter a productivity tool rather than 
 
 ## Related Notes
 
-- [[Metasploit]]
-- [[Msfconsole]]
-- [[Payloads]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Metasploit]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Msfconsole]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Help/Payloads]]
 - [[Modules]]
-- [[Msfvenom]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Msfvenom]]

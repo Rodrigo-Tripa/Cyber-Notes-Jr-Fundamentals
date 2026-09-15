@@ -6,7 +6,7 @@
 
 Wireshark is the world's most widely used network protocol analyzer. It captures, decodes, and displays network traffic, allowing analysts to inspect communications between devices at every layer of the networking stack.
 
-Unlike scanners such as [[Nmap]], which actively send packets to gather information about remote systems, Wireshark is primarily a **passive analysis tool**. It observes existing traffic without interacting with the network, making it invaluable for troubleshooting, incident response, malware analysis, protocol debugging, and forensic investigations.
+Unlike scanners such as [[Cyber-Notes-Jr-Fundamentals/07-Tools/Nmap]], which actively send packets to gather information about remote systems, Wireshark is primarily a **passive analysis tool**. It observes existing traffic without interacting with the network, making it invaluable for troubleshooting, incident response, malware analysis, protocol debugging, and forensic investigations.
 
 Wireshark can analyze both live network traffic and previously captured packet capture (PCAP) files, providing detailed visibility into how devices communicate.
 
@@ -204,5 +204,5 @@ It is an analysis tool, not an offensive security tool.
 - [[Packets-and-Frames]]
 - [[Networking-Basics]]
 - [[Ports]]
-- [[Nmap]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Nmap]]
 - [[Tcpdump]]

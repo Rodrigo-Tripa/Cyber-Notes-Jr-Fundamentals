@@ -249,10 +249,10 @@ When using John the Ripper:
 ## Related Notes
 
 - [[Cryptography]]
-- [[Linux]]
+- [[Cyber-Notes-Jr-Fundamentals/09-Cheatsheets/Linux]]
 - [[Linux-CLI]]
 - [[Permissions]]
-- [[Active-Directory]]
+- [[Cyber-Notes-Jr-Fundamentals/05-Operating-Systems/Active-Directory]]
 
 ---
 

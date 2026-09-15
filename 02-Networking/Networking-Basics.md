@@ -256,7 +256,7 @@ Without a solid understanding of networking, analysing or securing computer syst
 - [[Ports]]
 - [[Routing]]
 - [[Switching]]
-- [[DNS]]
+- [[Cyber-Notes-Jr-Fundamentals/02-Networking/DNS]]
 - [[DHCP]]
 - [[NAT]]
 - [[LAN]]

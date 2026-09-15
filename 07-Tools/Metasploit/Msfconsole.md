@@ -143,9 +143,9 @@ They are commonly used to:
 
 ## Related Notes
 
-- [[Metasploit]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Metasploit]]
 - [[Modules]]
-- [[Payloads]]
-- [[Meterpreter]]
-- [[Msfvenom]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Help/Payloads]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Meterpreter]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Msfvenom]]
 - [[Workspaces]]

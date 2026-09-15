@@ -50,6 +50,6 @@ When database support is enabled, information discovered through scans, exploits
 
 ## Related Notes
 
-- [[Metasploit]]
-- [[Msfconsole]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Metasploit]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Msfconsole]]
 - [[Modules]]

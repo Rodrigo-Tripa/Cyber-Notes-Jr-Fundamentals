@@ -16,11 +16,11 @@ Originally developed by H. D. Moore in 2003, Metasploit is now maintained by Rap
 
 The framework is composed of several interconnected components.
 
-- [[Msfconsole]] – Primary command-line interface.
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Msfconsole]] – Primary command-line interface.
 - [[Modules]] – Modular functionality such as exploits, auxiliary modules, payloads, encoders, and post modules.
-- [[Payloads]] – Code executed after successful exploitation.
-- [[Msfvenom]] – Standalone payload generation utility.
-- [[Meterpreter]] – Advanced in-memory post-exploitation payload.
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Help/Payloads]] – Code executed after successful exploitation.
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Msfvenom]] – Standalone payload generation utility.
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Meterpreter]] – Advanced in-memory post-exploitation payload.
 - [[Workspaces]] – Database-backed management of hosts, services, credentials, and vulnerabilities.
 
 ---
@@ -67,9 +67,9 @@ Effective use of Metasploit requires a solid understanding of networking, operat
 
 ## Related Notes
 
-- [[Msfconsole]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Msfconsole]]
 - [[Modules]]
-- [[Payloads]]
-- [[Msfvenom]]
-- [[Meterpreter]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Help/Payloads]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Msfvenom]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Meterpreter]]
 - [[Workspaces]]

@@ -54,6 +54,6 @@ Python therefore functions primarily as an automation and analysis tool within a
 - [[Data-Representation]]
 - [[Linux-CLI]]
 - [[Networking-Basics]]
-- [[HTTP]]
+- [[Cyber-Notes-Jr-Fundamentals/03-Web/HTTP]]
 - [[Offensive-Security]]
 - [[Defensive-Security]]

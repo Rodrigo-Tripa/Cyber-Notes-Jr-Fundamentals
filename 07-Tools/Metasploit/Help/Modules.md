@@ -40,7 +40,7 @@ Payload modules define the code executed after a successful exploitation.
 
 They determine what level of access the attacker receives, such as a command shell or a Meterpreter session.
 
-See [[Payloads]].
+See [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Help/Payloads]].
 
 ---
 
@@ -78,7 +78,7 @@ They are primarily used during exploit development to improve payload reliabilit
 
 ## Related Notes
 
-- [[Metasploit]]
-- [[Msfconsole]]
-- [[Payloads]]
-- [[Meterpreter]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Metasploit]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Msfconsole]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Help/Payloads]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Meterpreter]]

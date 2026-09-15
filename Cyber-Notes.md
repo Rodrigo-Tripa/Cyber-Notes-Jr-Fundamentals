@@ -10,25 +10,25 @@
 - [[Client-Server]]
 - [[Cloud]]
 - [[Virtualization]]
-- [[CPU]]
+- [[Cyber-Notes-Jr-Fundamentals/04-Computer-Fundamentals/CPU]]
 - [[RAM]]
-- [[Storage]]
+- [[Cyber-Notes-Jr-Fundamentals/04-Computer-Fundamentals/Storage]]
 
 ## Operating Systems
 - [[Operating-Systems]]
-- [[Cyber-Notes/05-Operating-Systems/Linux|Linux]]
+- [[Cyber-Notes-Jr-Fundamentals/05-Operating-Systems/Linux|Linux]]
 - [[Windows]]
 - [[Linux-CLI]]
 - [[Windows-CLI]]
 - [[Permissions]]
 - [[File-Systems]]
 - [[OS-Security]]
-- [[Active-Directory]]
+- [[Cyber-Notes-Jr-Fundamentals/05-Operating-Systems/Active-Directory]]
 
 ## Programming
 - [[Python]]
 - [[JavaScript]]
-- [[Cyber-Notes/06-Programming/SQL|SQL]]
+- [[Cyber-Notes-Jr-Fundamentals/06-Programming/SQL|SQL]]
 - [[Data-Encoding]]
 - [[Data-Representation]]
 
@@ -49,7 +49,7 @@
 - [[NAT]]
 
 ## Services
-- [[DNS]]
+- [[Cyber-Notes-Jr-Fundamentals/02-Networking/DNS]]
 - [[DHCP]]
 - [[Ports]]
 
@@ -59,11 +59,11 @@
 
 ## Architecture
 - [[Web-Architecture]]
-- [[Cyber-Notes/03-Web/Websites|Websites]]
+- [[Cyber-Notes-Jr-Fundamentals/03-Web/Websites|Websites]]
 - [[Browsers]]
 
 ## Protocols
-- [[HTTP]]
+- [[Cyber-Notes-Jr-Fundamentals/03-Web/HTTP]]
 - [[HTTPS]]
 
 ## State Management
@@ -90,41 +90,41 @@
 # Security Tools
 
 ## Reconnaissance
-- [[Nmap]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Nmap]]
 
 ## Traffic Analysis
 - [[Wireshark]]
 - [[Tcpdump]]
 
 ## Password Cracking
-- [[John-the-Ripper]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/John-the-Ripper]]
 
 ## Exploitation
-- [[Metasploit]]
-- [[Msfconsole]]
-- [[Meterpreter]]
-- [[Msfvenom]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Metasploit]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Msfconsole]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Meterpreter]]
+- [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Msfvenom]]
 
 ---
 
 # Cheatsheets
 
 ## General
-- [[Cyber-Notes/09-Cheatsheets/Linux|Linux]]
+- [[Cyber-Notes-Jr-Fundamentals/09-Cheatsheets/Linux|Linux]]
 - [[Bash]]
 - [[Networking]]
-- [[Cyber-Notes/09-Cheatsheets/SQL|SQL]]
+- [[Cyber-Notes-Jr-Fundamentals/09-Cheatsheets/SQL|SQL]]
 - [[Git]]
 
 ## Tool Cheatsheets
-- [[Nmap-Cheat]]
+- [[Cyber-Notes-Jr-Fundamentals/09-Cheatsheets/Tools/Nmap-Cheat]]
 - [[Wireshark-Cheat]]
 - [[Tcpdump-Cheat]]
-- [[John-Ripper-Cheat]]
-- [[Metasploit-Cheat]]
+- [[Cyber-Notes-Jr-Fundamentals/09-Cheatsheets/Tools/John-Ripper-Cheat]]
+- [[Cyber-Notes-Jr-Fundamentals/09-Cheatsheets/Tools/Metasploit/Metasploit-Cheat]]
 - [[Meterpreter-Cheat]]
 - [[Msfvenom-Cheat]]
-- [[Burp-Suite-Cheat]]
+- [[Cyber-Notes-Jr-Fundamentals/09-Cheatsheets/Tools/Burp-Suite-Cheat]]
 
 ---
 
@@ -139,13 +139,13 @@
 
 # Resources
 
-- [[Books]]
-- [[Websites]]
-- [[Glossary]]
+- [[Cyber-Notes-Jr-Fundamentals/00-Resources/Books]]
+- [[Cyber-Notes-Jr-Fundamentals/03-Web/Websites]]
+- [[Cyber-Notes-Jr-Fundamentals/00-Resources/Glossary]]
 - [[Search-Operators]]
-- [[Cheat-Sheets]]
-- [[Cyber-Notes/00-Resources/Websites|Websites]]
-- [[README]]
+- [[Cyber-Notes-Jr-Fundamentals/00-Resources/Cheat-Sheets]]
+- [[Cyber-Notes-Jr-Fundamentals/00-Resources/Websites|Websites]]
+- [[Cyber-Notes-Jr-Fundamentals/README]]
 ---
 
 # Walkthroughs
@@ -180,24 +180,24 @@ Computer Fundamentals
 Networking
 → [[Wireshark]]
 → [[Tcpdump]]
-→ [[Nmap]]
+→ [[Cyber-Notes-Jr-Fundamentals/07-Tools/Nmap]]
 
 Exploitation
-→ [[Metasploit]]
-→ [[Meterpreter]]
-→ [[Msfvenom]]
+→ [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Metasploit]]
+→ [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Meterpreter]]
+→ [[Cyber-Notes-Jr-Fundamentals/07-Tools/Metasploit/Msfvenom]]
 
 Windows
 → [[PowerShell]]
 → [[Windows-CLI]]
-→ [[Active-Directory]]
+→ [[Cyber-Notes-Jr-Fundamentals/05-Operating-Systems/Active-Directory]]
 
 Linux
-→ [[Linux]]
+→ [[Cyber-Notes-Jr-Fundamentals/09-Cheatsheets/Linux]]
 → [[Linux-CLI]]
 
 Web
-→ [[HTTP]]
+→ [[Cyber-Notes-Jr-Fundamentals/03-Web/HTTP]]
 → [[HTTPS]]
 → [[Cookies]]
 → [[Sessions]]
@@ -205,4 +205,4 @@ Web
 Cryptography
 → [[Cryptography]]
 → [[HTTPS]]
-→ [[John-the-Ripper]]
+→ [[Cyber-Notes-Jr-Fundamentals/07-Tools/John-the-Ripper]]

@@ -419,13 +419,13 @@ current_database()      → PostgreSQL database
 
 ## Related Notes
 
-* [[SQL]]
-* [[HTTP]]
+* [[Cyber-Notes-Jr-Fundamentals/09-Cheatsheets/SQL]]
+* [[Cyber-Notes-Jr-Fundamentals/03-Web/HTTP]]
 * [[HTTPS]]
 * [[Web-Architecture]]
 * [[Burp Suite]]
-* [[Burp-Suite-Cheat]]
-* [[Websites]]
+* [[Cyber-Notes-Jr-Fundamentals/09-Cheatsheets/Tools/Burp-Suite-Cheat]]
+* [[Cyber-Notes-Jr-Fundamentals/03-Web/Websites]]
 * [[Sessions]]
 
 ## Key Takeaways
